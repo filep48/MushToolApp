@@ -31,8 +31,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.MutableState
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -194,11 +194,11 @@ fun QuizApp(navController: NavController) {
                     if (elapsedTime.intValue <= 20000) {
                         remainingTime = startTime.intValue - elapsedTime.intValue
                     }
-                    Row(horizontalArrangement = Arrangement.Center) {
-
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceEvenly
+                    ) {
                         Text(
-                            modifier = Modifier
-                                .padding(horizontal = 30.dp),
                             text = stringResource(R.string.score)+": " + score.intValue,
                             fontFamily = interFamily,
                             fontWeight = FontWeight.SemiBold,
@@ -213,12 +213,19 @@ fun QuizApp(navController: NavController) {
                             fontWeight = FontWeight.SemiBold,
                             fontSize = 20.sp
                         )
-//                        nivel de la seta
+                    }
+                    
+                    Spacer(modifier = Modifier.height(15.dp))
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.Center
+                    ){
                         Text(
-                            modifier = Modifier
-                                .padding(horizontal = 50.dp),
                             text = difficulty.value,
-                            style = MaterialTheme.typography.bodyLarge
+                            style = MaterialTheme.typography.bodyLarge,
+                            fontFamily = interFamily,
+                            fontWeight = FontWeight.SemiBold,
+                            fontSize = 20.sp
                         )
                     }
                     Column(
@@ -240,7 +247,7 @@ fun QuizApp(navController: NavController) {
                                 options.forEachIndexed { index, option ->
                                     ElevatedCard (
                                         modifier = Modifier
-                                            .selectable(selectedIndex.intValue == index){
+                                            .selectable(selectedIndex.intValue == index) {
                                                 selectedIndex.intValue = index
                                             }
                                             .fillMaxWidth(0.9f)
