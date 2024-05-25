@@ -23,16 +23,13 @@ MushTool es una aplicación móvil nativa para Android, desarrollada utilizando 
 
 ### 1. Kevin Felipe Vásquez López
 - **Rol en el Proyecto**: Líder de Proyecto, Desarrollador y Tester/Debugger.
-- **Currículum Vitae**: [CVProgFel.pdf](CVProgFel.pdf)
 
 ### 2. Ainhoa Scarlet Reyes Moreno
 - **Rol en el Proyecto**: Desarrolladora y Diseñadora UI/UX.
-- **Currículum Vitae**: [CV_Ainhoa.pdf](CV_Ainhoa.pdf)
 
 ### 3. Soufian Ahlal
 - **Rol en el Proyecto**: Desarrollador.
 - **GitHub**: [Perfil GitHub](https://github.com/DeathItself)
-- **Currículum Vitae**: [CV_Soufian_Ahlal_Aggadi.pdf](CV_Soufian_Ahlal_Aggadi.pdf)
 
 ## Tecnologías Utilizadas
 
